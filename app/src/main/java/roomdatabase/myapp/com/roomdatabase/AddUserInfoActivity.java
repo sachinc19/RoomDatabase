@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class AddUserInfoActivity extends AppCompatActivity implements View.OnClickListener {
     EditText edt_userid,edt_username,edt_useremailid;
-    Button btnsave;
+    Button btnsave,btndeletee;
     int userid;
     String name,emailid;
     @Override
@@ -20,6 +20,7 @@ public class AddUserInfoActivity extends AppCompatActivity implements View.OnCli
         edt_username=findViewById(R.id.edt_username);
         edt_useremailid =findViewById(R.id.edt_useremailid);
         btnsave =(Button)findViewById(R.id.btnsave);
+        btndeletee =(Button)findViewById(R.id.btndeletee);
         btnsave.setOnClickListener(this);
     }
 
@@ -37,6 +38,9 @@ public class AddUserInfoActivity extends AppCompatActivity implements View.OnCli
                 MainActivity.myRoomDatabase.myDao().AddUser(user);
                 Toast.makeText(this, "Add user Successfully", Toast.LENGTH_SHORT).show();
 
+                break;
+
+            case R.id.btndeletee:
                 break;
         }
     }
