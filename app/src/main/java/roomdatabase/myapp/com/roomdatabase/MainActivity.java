@@ -20,9 +20,11 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         button =(Button)findViewById(R.id.button);
         button2 =(Button)findViewById(R.id.button2);
         button3 =(Button)findViewById(R.id.button3);
+        button4=(Button)findViewById(R.id.button4);
         button.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
+        button4.setOnClickListener(this);
         myRoomDatabase = Room.databaseBuilder(getApplicationContext(),MyRoomDatabase.class,"UserDB").allowMainThreadQueries().build();
     }
 
@@ -39,8 +41,13 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                 startActivity(i1);
                 break;
             case R.id.button3:
-                Intent i2 = new Intent(MainActivity.this,UpdateUserActivty.class);
+                Intent i2 = new Intent(MainActivity.this,DeleteRecordActivity.class);
                 startActivity(i2);
+                break;
+
+            case R.id.button4:
+                Intent i3 = new Intent(MainActivity.this,UpdateUserActivty.class);
+                startActivity(i3);
                 break;
 
         }

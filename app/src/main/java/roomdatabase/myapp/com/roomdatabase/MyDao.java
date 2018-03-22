@@ -20,4 +20,7 @@ public interface MyDao {  //data access object
 
     @Update
     public void UpdateUser(User user);
+
+    @Query("delete from users where username = :username")
+    public void deleteUsers(String username);
 }
