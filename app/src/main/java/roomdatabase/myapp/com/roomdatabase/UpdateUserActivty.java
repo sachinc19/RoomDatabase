@@ -10,6 +10,7 @@ import android.widget.Toast;
 public class UpdateUserActivty extends AppCompatActivity implements View.OnClickListener {
     EditText edt_userid,edt_username,edt_useremailid;
     Button btnupdate;
+    String as;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_user_activty);

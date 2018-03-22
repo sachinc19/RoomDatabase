@@ -18,8 +18,12 @@ android:orientation="vertical">
               android:id="@+id/edt_useremailid"
     />
     <Button android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:id="@+id/btnsave"
-    android:text="Save"/>
+                                 android:id="@+id/btnsave"
+                                 android:text="Save"/>
+
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/btndeletee"
+            android:text="Delete"/>
 
 
 </LinearLayout>
